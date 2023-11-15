@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="C:\Users\Lucas\OneDrive\Desktop\Influencer Agency Approach Campaign\Website\Question mark Favicon 32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="C:\Users\Lucas\OneDrive\Desktop\Influencer Agency Approach Campaign\Website\Question mark Favicon 16.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJQRPCQ8ME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PJQRPCQ8ME');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8;
+            background-image: url('Landing Page 1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #passwordForm {
+            position: absolute;
+            top: 49%;  /* Moved up approx. 1cm */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #password {
+            font-size: 20px;
+            padding: 10px;
+            width: 320px;  /* Increased by approx. 3.5cm */
+        }
+    </style>
+</head>
+
+<body>
+    <form id="passwordForm">
+        <input type="password" id="password" placeholder="Enter Password">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(e) {
+    e.preventDefault();  
+
+    const password = document.getElementById('password').value.toLowerCase();  // Convert entered password to lowercase
+    const correctPassword = "tour27".toLowerCase();  // Convert correct password to lowercase
+
+    if (password === correctPassword) {
+        window.location.href = "nextPage.html";  
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+});
+
+    </script>
+</body>
+
+</html>

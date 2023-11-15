@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>72RUOT</title>
+    <link rel="icon" type="image/png" sizes="32x32" >
+    <link rel="icon" type="image/png" sizes="16x16" >
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJQRPCQ8ME"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PJQRPCQ8ME');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(17, 17, 17);
+            background-image: url('Landing Page 1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-attachment: fixed; */
+            background-size: cover;
+        }
+
+        #passwordForm {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            /* background-color: aqua; */
+            top: 49%;
+            /* Moved up approx. 1cm */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #password {
+            font-size: 20px;
+            padding: 10px;
+            width: 320px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* Increased by approx. 3.5cm */
+        }
+
+        #btn {
+            padding: 0.3rem 0.8rem;
+        }
+
+        @media only screen and (max-width:650px) {
+            #passwordForm {
+                /* background-color:aqua; */
+                position: absolute;
+                top: 52%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.8rem;
+            }
+
+            #password {
+            padding: 18px;
+            width: 23rem;
+        }
+        }
+
+        @media only screen and (max-width:430px) {
+            #password {
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <form id="passwordForm">
+        <input type="password" id="password" placeholder="Enter Password">
+        <input id="btn" type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const password = document.getElementById('password').value.toLowerCase();  // Convert entered password to lowercase
+            const correctPassword = "tour27".toLowerCase();  // Convert correct password to lowercase
+
+            if (password === correctPassword) {
+                window.location.href = "nextPage.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        });
+    </script>
+</body>
+
+</html>
